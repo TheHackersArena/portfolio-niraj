@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, Layout, Tool, Layers } from 'lucide-react';
+import { Brain, Code, Database, Layout, Wrench, Layers } from 'lucide-react';
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -31,7 +31,7 @@ const SkillsSection = () => {
     },
     {
       title: "Platforms & Tools",
-      icon: Tool,
+      icon: Wrench,
       skills: [
         "AWS",
         "Docker",
