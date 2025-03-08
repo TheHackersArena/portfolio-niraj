@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, Layout, Wrench, Layers } from 'lucide-react';
+import { Brain, Code, Wrench, Layout, Layers } from 'lucide-react';
 
 const SkillsSection = () => {
   const skillCategories = [
