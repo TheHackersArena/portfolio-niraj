@@ -69,11 +69,11 @@ const HeroSection = () => {
           className="w-full md:w-1/2 flex justify-center"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-            {/* Replace with actual image when available */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-blue-400/10" />
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500 font-medium">Profile Photo</span>
-            </div>
+            <img 
+              src="/lovable-uploads/59894edf-74d1-4bfb-83ba-10eacc7aade5.png"
+              alt="Niraj Kumar"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
       </div>
