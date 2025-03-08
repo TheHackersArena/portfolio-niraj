@@ -1,6 +1,7 @@
 
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
+import SkillsSection from '@/components/SkillsSection';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       className="min-h-screen"
     >
       <HeroSection />
+      <SkillsSection />
     </motion.div>
   );
 };
