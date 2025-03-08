@@ -1,0 +1,84 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const HeroSection = () => {
+  return (
+    <section className="min-h-screen w-full flex items-center justify-center relative pt-16 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute left-1/3 bottom-0 -z-10 h-[500px] w-[500px] rounded-full bg-blue-400/5 blur-3xl" />
+      </div>
+      
+      <div className="container max-w-6xl mx-auto px-8 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div className="w-full md:w-1/2 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-2"
+          >
+            <span className="text-sm md:text-base font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full">
+              Hello, I'm
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4">
+              Niraj Kumar
+            </h1>
+            <h2 className="text-xl md:text-2xl text-foreground/70 font-medium">
+              Product Manager | Tech Entrepreneur | Startup Enthusiast
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-foreground/70 text-base md:text-lg"
+          >
+            I specialize in product strategy, user experience, and building scalable solutions. 
+            With a background in tech entrepreneurship and a passion for innovation, I help transform ideas into impactful products.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 pt-2"
+          >
+            <Link to="/projects" className="btn-primary flex items-center justify-center gap-2 group">
+              View Portfolio
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <a 
+              href="/resume.pdf" 
+              download
+              className="btn-outline flex items-center justify-center gap-2"
+            >
+              Download Resume
+              <Download className="h-4 w-4" />
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="w-full md:w-1/2 flex justify-center"
+        >
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+            {/* Replace with actual image when available */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-blue-400/10" />
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500 font-medium">Profile Photo</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
