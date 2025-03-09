@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +38,9 @@ const Navbar = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-lg',
-        isScrolled ? 'bg-white/80 shadow-sm' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-white/80 shadow-sm dark:bg-black/80 dark:shadow-gray-800/20' 
+          : 'bg-transparent'
       )}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -46,7 +49,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:block">
+        <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-8">
             {navItems.map((item) => (
               <li key={item.name}>
@@ -64,25 +67,29 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 rounded-full hover:bg-secondary/80 transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
+        <div className="md:hidden flex items-center space-x-4">
+          <ThemeToggle />
+          <button
+            className="p-2 rounded-full hover:bg-secondary/80 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden h-screen bg-white flex flex-col py-8 px-6 animate-fade-in-down">
+        <div className="md:hidden h-screen bg-background flex flex-col py-8 px-6 animate-fade-in-down">
           <nav>
             <ul className="flex flex-col space-y-4">
               {navItems.map((item) => (
