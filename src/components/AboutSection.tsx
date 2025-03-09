@@ -97,10 +97,10 @@ const AboutSection = () => {
               </h3>
               <div className="space-y-4">
                 {education.map((item, index) => (
-                  <div key={index} className="card hover:border-primary/20">
+                  <div key={index} className="card hover:border-primary/20 bg-card text-card-foreground">
                     <h4 className="font-semibold">{item.institution}</h4>
-                    <p className="text-foreground/70">{item.degree}</p>
-                    <div className="flex justify-between items-center mt-2 text-sm text-foreground/60">
+                    <p className="text-muted-foreground">{item.degree}</p>
+                    <div className="flex justify-between items-center mt-2 text-sm text-muted-foreground">
                       <span>{item.year}</span>
                       <span>{item.details}</span>
                     </div>
@@ -122,9 +122,9 @@ const AboutSection = () => {
               </h3>
               <div className="space-y-4">
                 {achievements.map((item, index) => (
-                  <div key={index} className="card hover:border-primary/20">
+                  <div key={index} className="card hover:border-primary/20 bg-card text-card-foreground">
                     <h4 className="font-semibold">{item.title}</h4>
-                    <p className="text-foreground/70 mt-1">{item.description}</p>
+                    <p className="text-muted-foreground mt-1">{item.description}</p>
                   </div>
                 ))}
               </div>

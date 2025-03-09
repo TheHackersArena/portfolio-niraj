@@ -67,7 +67,7 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-              className="card hover:border-primary/20 h-full"
+              className="card hover:border-primary/20 h-full bg-card text-card-foreground"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -80,7 +80,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="px-3 py-1.5 bg-secondary text-foreground/80 text-sm rounded-full"
+                    className="px-3 py-1.5 bg-secondary text-secondary-foreground text-sm rounded-full"
                   >
                     {skill}
                   </span>
@@ -97,7 +97,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8"
         >
-          <div className="card hover:border-primary/20">
+          <div className="card hover:border-primary/20 bg-card text-card-foreground">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Layout className="h-5 w-5 text-primary" />
@@ -108,7 +108,7 @@ const SkillsSection = () => {
               <div className="w-full bg-secondary rounded-full h-2.5">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: '90%' }}></div>
               </div>
-              <div className="flex justify-between text-xs text-foreground/60">
+              <div className="flex justify-between text-xs text-muted-foreground">
                 <span>UI/UX Research</span>
                 <span>User Testing</span>
                 <span>Design Systems</span>
@@ -116,7 +116,7 @@ const SkillsSection = () => {
             </div>
           </div>
 
-          <div className="card hover:border-primary/20">
+          <div className="card hover:border-primary/20 bg-card text-card-foreground">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Layers className="h-5 w-5 text-primary" />
@@ -127,7 +127,7 @@ const SkillsSection = () => {
               <div className="w-full bg-secondary rounded-full h-2.5">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: '85%' }}></div>
               </div>
-              <div className="flex justify-between text-xs text-foreground/60">
+              <div className="flex justify-between text-xs text-muted-foreground">
                 <span>Go-to-Market</span>
                 <span>Market Analysis</span>
                 <span>Growth Strategy</span>

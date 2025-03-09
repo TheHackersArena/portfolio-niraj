@@ -81,10 +81,10 @@ const ExperienceSection = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-2 mb-3">
                 <h3 className="text-xl font-semibold">{exp.position}</h3>
-                <span className="hidden md:block text-foreground/50">•</span>
+                <span className="hidden md:block text-muted-foreground">•</span>
                 <span className="text-primary font-medium">{exp.company}</span>
               </div>
-              <div className="text-sm text-foreground/60 mb-4">{exp.duration}</div>
+              <div className="text-sm text-muted-foreground mb-4">{exp.duration}</div>
               
               <ul className="space-y-2 text-foreground/80">
                 {exp.responsibilities.map((responsibility, i) => (

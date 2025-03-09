@@ -91,14 +91,14 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                  className="card hover:border-primary/20 flex flex-col h-full"
+                  className="card hover:border-primary/20 flex flex-col h-full bg-card text-card-foreground"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <span className="text-xs font-medium text-primary/80 px-2 py-1 bg-primary/5 rounded-full">{project.category}</span>
                     <project.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h4 className="text-lg font-semibold">{project.title}</h4>
-                  <p className="text-foreground/70 mt-2 flex-grow">{project.description}</p>
+                  <p className="text-muted-foreground mt-2 flex-grow">{project.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -119,14 +119,14 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                  className="card hover:border-primary/20 flex flex-col h-full"
+                  className="card hover:border-primary/20 flex flex-col h-full bg-card text-card-foreground"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <span className="text-xs font-medium text-primary/80 px-2 py-1 bg-primary/5 rounded-full">{startup.category}</span>
                     <startup.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h4 className="text-lg font-semibold">{startup.title}</h4>
-                  <p className="text-foreground/70 mt-2 flex-grow">{startup.description}</p>
+                  <p className="text-muted-foreground mt-2 flex-grow">{startup.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -147,14 +147,14 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                  className="card hover:border-primary/20 flex flex-col h-full"
+                  className="card hover:border-primary/20 flex flex-col h-full bg-card text-card-foreground"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <span className="text-xs font-medium text-primary/80 px-2 py-1 bg-primary/5 rounded-full">{competition.category}</span>
                     <competition.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h4 className="text-lg font-semibold">{competition.title}</h4>
-                  <p className="text-foreground/70 mt-2 flex-grow">{competition.description}</p>
+                  <p className="text-muted-foreground mt-2 flex-grow">{competition.description}</p>
                 </motion.div>
               ))}
             </div>
