@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -52,12 +52,13 @@ const HeroSection = () => {
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a 
-              href="/resume.pdf" 
-              download="Niraj_Kumar_Resume.pdf"
+              href="/Niraj Kumar.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline flex items-center justify-center gap-2"
             >
-              Download Resume
-              <Download className="h-4 w-4" />
+              View Resume
+              <ExternalLink className="h-4 w-4" />
             </a>
           </motion.div>
         </div>
