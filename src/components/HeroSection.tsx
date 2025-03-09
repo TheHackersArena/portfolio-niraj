@@ -53,7 +53,7 @@ const HeroSection = () => {
             </Link>
             <a 
               href="/resume.pdf" 
-              download
+              download="Niraj_Kumar_Resume.pdf"
               className="btn-outline flex items-center justify-center gap-2"
             >
               Download Resume
