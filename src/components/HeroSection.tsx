@@ -21,7 +21,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                className="w-20 h-20 rounded-full overflow-hidden shadow-xl flex-shrink-0"
+                className="w-24 h-24 rounded-full overflow-hidden shadow-xl flex-shrink-0"
               >
                 <img 
                   src="/lovable-uploads/59894edf-74d1-4bfb-83ba-10eacc7aade5.png"
