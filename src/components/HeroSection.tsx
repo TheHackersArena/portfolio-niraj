@@ -15,27 +15,48 @@ const HeroSection = () => {
       <div className="container max-w-6xl mx-auto px-8 py-16 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Mobile image that shows next to name on small screens */}
-          <div className="md:hidden flex items-center gap-4 w-full">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="w-24 h-24 rounded-full overflow-hidden shadow-xl flex-shrink-0"
-            >
-              <img 
-                src="/lovable-uploads/59894edf-74d1-4bfb-83ba-10eacc7aade5.png"
-                alt="Niraj Kumar"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.h1
+          <div className="md:hidden flex flex-col w-full">
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-bold"
+              className="text-sm md:text-base font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full self-start mb-2"
             >
-              Niraj Kumar
-            </motion.h1>
+              Hello, I'm
+            </motion.span>
+            
+            <div className="flex items-center gap-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                className="w-20 h-20 rounded-full overflow-hidden shadow-xl flex-shrink-0"
+              >
+                <img 
+                  src="/lovable-uploads/59894edf-74d1-4bfb-83ba-10eacc7aade5.png"
+                  alt="Niraj Kumar"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <div className="flex flex-col items-start">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-3xl font-bold"
+                >
+                  Niraj Kumar
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="text-foreground/80 text-sm font-medium"
+                >
+                  Building the Future of Digital Health
+                </motion.p>
+              </div>
+            </div>
           </div>
 
           <div className="w-full md:w-1/2 space-y-6">
@@ -52,6 +73,14 @@ const HeroSection = () => {
               <h1 className="hidden md:block text-4xl sm:text-5xl md:text-6xl font-bold mt-4">
                 Niraj Kumar
               </h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="hidden md:block text-foreground/80 text-lg font-medium mt-2"
+              >
+                Building the Future of Digital Health
+              </motion.p>
               <h2 className="text-xl md:text-2xl text-foreground/70 font-medium">
                 Product Manager | Tech Entrepreneur | Startup Enthusiast
               </h2>
@@ -83,7 +112,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="btn-outline flex items-center justify-center gap-2"
               >
-                View Resume
+                Preview Resume
                 <ExternalLink className="h-4 w-4" />
               </a>
             </motion.div>
