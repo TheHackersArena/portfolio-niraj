@@ -14,18 +14,9 @@ const HeroSection = () => {
       
       <div className="container max-w-6xl mx-auto px-8 py-16 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Mobile image that shows next to name on small screens */}
-          <div className="md:hidden flex flex-col w-full">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-sm md:text-base font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full self-start mb-2"
-            >
-              Hello, I'm
-            </motion.span>
-            
-            <div className="flex items-center gap-4">
+          {/* Mobile layout */}
+          <div className="md:hidden w-full">
+            <div className="flex gap-4 items-start">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +29,17 @@ const HeroSection = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <div className="flex flex-col items-start">
+              
+              <div className="flex flex-col">
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-sm font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full self-start mb-1"
+                >
+                  Hello, I'm
+                </motion.span>
+                
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -47,6 +48,7 @@ const HeroSection = () => {
                 >
                   Niraj Kumar
                 </motion.h1>
+                
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -66,7 +68,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="space-y-2"
             >
-              <span className="text-sm md:text-base font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full">
+              <span className="hidden md:inline-block text-sm md:text-base font-medium text-primary px-4 py-1.5 bg-primary/10 rounded-full">
                 Hello, I'm
               </span>
               {/* Desktop heading that only shows on medium screens and up */}
@@ -81,7 +83,7 @@ const HeroSection = () => {
               >
                 Building the Future of Digital Health
               </motion.p>
-              <h2 className="text-xl md:text-2xl text-foreground/70 font-medium">
+              <h2 className="text-xl md:text-2xl text-foreground/70 font-medium mt-6 md:mt-0">
                 Product Manager | Tech Entrepreneur | Startup Enthusiast
               </h2>
             </motion.div>
