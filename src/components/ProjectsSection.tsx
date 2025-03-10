@@ -15,7 +15,7 @@ const ProjectsSection = () => {
     },
     {
       id: "sodashi",
-      title: "Sodashi",
+      title: "SODASHI",
       description: "Decentralized data marketplace.",
       category: "Startup MVP",
       icon: Lightbulb
@@ -85,6 +85,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="space-y-16">
+          {/* Startup MVPs - First */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,6 +115,7 @@ const ProjectsSection = () => {
             </div>
           </motion.div>
 
+          {/* Hackathons & Competitions - Second */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -143,6 +145,7 @@ const ProjectsSection = () => {
             </div>
           </motion.div>
 
+          {/* Notable Projects - Last */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

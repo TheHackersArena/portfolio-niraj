@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, FolderGit2, Award, Lightbulb } from 'lucide-react';
+import { ArrowLeft, FolderGit2, Award, Lightbulb, ExternalLink, Download, Globe, DollarSign, Users, Lock, BarChart4, Calendar, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/button';
 
 const ProjectDetail = () => {
@@ -31,13 +31,118 @@ const ProjectDetail = () => {
     },
     {
       id: "sodashi",
-      title: "Sodashi",
+      title: "SODASHI",
       description: "Decentralized data marketplace.",
       category: "Startup MVP",
       icon: Lightbulb,
-      fullDescription: `Sodashi is a decentralized data marketplace built on blockchain technology that allows users to 
+      heroTitle: "SODASHI: Powering Secure & Transparent Data Transactions",
+      heroSubtitle: "A decentralized platform revolutionizing data sharing with blockchain-powered transparency and privacy.",
+      ctaText: "Explore the Future of Data",
+      fullDescription: `SODASHI is a decentralized data marketplace built on blockchain technology that allows users to 
                         securely buy, sell, and trade data assets. The platform uses smart contracts to ensure transparent 
                         transactions and fair compensation for data creators while maintaining privacy and security of sensitive information.`,
+      problemStatement: {
+        title: "The Problem",
+        description: "The traditional data marketplace is centralized, vulnerable to breaches, and lacks transparency.",
+        challenges: [
+          "Lack of privacy 🔐",
+          "Data breaches & security risks 🚧",
+          "No data governance & poor quality 🛑",
+          "Standardization issues 📊"
+        ],
+        marketSize: {
+          global: "The global data market was $274B in 2020 and is projected to hit $603B by 2025 (CAGR: 18%).",
+          singapore: "Singapore Market (SAM): Estimated at $4.1B by 2025, with an initial addressable market of $205M."
+        }
+      },
+      solution: {
+        title: "How SODASHI Solves This",
+        description: "SODASHI leverages blockchain & smart contracts to create a secure, transparent, and decentralized data-sharing network.",
+        benefits: [
+          "Data contributors control access & set their own prices.",
+          "Data buyers get high-quality, verified data without intermediaries.",
+          "Blockchain ensures integrity, compliance, and trust."
+        ],
+        features: [
+          "Smart contract-based transactions 🤖",
+          "Data quality control & governance ✅",
+          "Enhanced security & reputation system 🔒",
+          "API integrations for seamless data exchange 🔗"
+        ]
+      },
+      goToMarket: {
+        title: "Go-To-Market Strategy 🚀",
+        description: "Engagement & Awareness:",
+        points: [
+          "Targeting finance, healthcare, and retail industries.",
+          "Partnering with research institutions & government agencies.",
+          "Community building with token-based rewards for data providers."
+        ]
+      },
+      roadmap: {
+        title: "Roadmap & Development Timeline 🛠",
+        phases: [
+          "Phase 1 (Platform Design & Architecture) - 2 Weeks",
+          "Phase 2 (Smart Contract Development) - 4 Weeks",
+          "Phase 3 (Front-end & Back-end Development) - 12 Weeks",
+          "Phase 4 (Integration & Testing) - 2 Weeks",
+          "Phase 5 (Deployment & Compliance) - 3 Weeks"
+        ],
+        team: {
+          title: "Team Composition:",
+          members: [
+            "Project Manager (2)",
+            "Developers (5)",
+            "Data Scientists (2)",
+            "UX/UI Designers (2)",
+            "QA Testers (2)",
+            "Legal & Compliance (2)",
+            "Marketing & Biz Dev (2)"
+          ]
+        }
+      },
+      monetization: {
+        title: "Monetization Strategy 💰",
+        streams: [
+          "Premium Features: Advanced analytics, visualization tools.",
+          "Advertising: Sell ad space to businesses targeting data users.",
+          "Commission Model: A small fee on transactions within the marketplace."
+        ],
+        funding: {
+          title: "Funding Plan:",
+          description: "Seeking $1.2M investment for 25% equity to fund:",
+          allocation: [
+            "Development (35.3%)",
+            "Technology (23.5%)",
+            "Marketing (11.8%)",
+            "Compliance (11.8%)",
+            "Contingency (17.6%)"
+          ]
+        }
+      },
+      team: {
+        title: "Meet the Team 👨‍💻",
+        founders: [
+          {
+            name: "Niraj Kumar",
+            role: "Product & Strategy",
+            linkedin: "https://www.linkedin.com/in/nirajkryadav/",
+            website: "https://nirajkr.com/"
+          }
+        ],
+        members: [
+          "Aniruddha Niraj",
+          "Pranav Preeti",
+          "Nagaraj",
+          "Naman"
+        ]
+      },
+      callToAction: {
+        title: "Call to Action:",
+        message: "Be part of the decentralized data revolution!",
+        buttonText: "Join the SODASHI movement today!"
+      },
+      projectLink: "https://drive.google.com/file/d/1vcAMWrPTSUiPXONflVDItiyRyLsCQzry/view?usp=drive_link",
       challenges: [
         "Implementing secure data exchange protocols using blockchain",
         "Designing an intuitive user interface for complex data transactions",
@@ -164,6 +269,317 @@ const ProjectDetail = () => {
 
   const Icon = project.icon;
 
+  // Special rendering for SODASHI project
+  if (project.id === "sodashi") {
+    return (
+      <section className="section-container py-8">
+        <div>
+          <Link to="/projects">
+            <Button variant="ghost" className="gap-2 mb-6">
+              <ArrowLeft className="h-4 w-4" />
+              Back to Projects
+            </Button>
+          </Link>
+        </div>
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative rounded-xl overflow-hidden bg-gradient-to-r from-primary/10 to-primary/20 mb-16"
+        >
+          <div className="relative z-10 py-16 px-8 flex flex-col items-center text-center">
+            <span className="text-sm font-medium text-primary/80 px-3 py-1 bg-primary/10 rounded-full mb-4">
+              {project.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+              {project.heroTitle}
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mb-8">
+              {project.heroSubtitle}
+            </p>
+            <Button size="lg" className="group">
+              {project.ctaText}
+              <ArrowLeft className="h-4 w-4 transform rotate-180 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </motion.div>
+
+        {/* Project PDF Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12 p-4 bg-muted rounded-lg flex items-center justify-between"
+        >
+          <div className="flex items-center gap-3">
+            <Download className="h-5 w-5 text-primary" />
+            <span className="font-medium">Project Documentation</span>
+          </div>
+          <a 
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-primary hover:underline"
+          >
+            View PDF <ExternalLink className="h-4 w-4" />
+          </a>
+        </motion.div>
+
+        {/* Problem Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <Lock className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.problemStatement.title}</h2>
+          </div>
+          <p className="text-lg mb-6">{project.problemStatement.description}</p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Major Challenges:</h3>
+              <ul className="space-y-2">
+                {project.problemStatement.challenges.map((challenge, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-primary font-medium">•</span>
+                    <span>{challenge}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-muted p-6 rounded-lg space-y-4">
+              <div className="flex items-center gap-2">
+                <Globe className="h-5 w-5 text-primary" />
+                <h3 className="text-lg font-semibold">Market Opportunity</h3>
+              </div>
+              <p className="text-muted-foreground">{project.problemStatement.marketSize.global}</p>
+              <p className="text-muted-foreground">{project.problemStatement.marketSize.singapore}</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Solution */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <Lightbulb className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.solution.title}</h2>
+          </div>
+          <p className="text-lg mb-6">{project.solution.description}</p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Benefits:</h3>
+              <ul className="space-y-2">
+                {project.solution.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 min-w-5 text-primary" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Key Features:</h3>
+              <ul className="space-y-2">
+                {project.solution.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-primary font-medium">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Go To Market Strategy */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mb-16 bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-lg"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <BarChart4 className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.goToMarket.title}</h2>
+          </div>
+          <p className="text-lg font-medium mb-4">{project.goToMarket.description}</p>
+          
+          <ul className="space-y-3">
+            {project.goToMarket.points.map((point, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-primary font-medium">•</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Roadmap */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <Calendar className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.roadmap.title}</h2>
+          </div>
+          
+          <div className="space-y-4 mb-8">
+            {project.roadmap.phases.map((phase, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                  {index + 1}
+                </div>
+                <div className="bg-muted rounded-lg px-4 py-3 flex-1">
+                  {phase}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="bg-muted p-6 rounded-lg">
+            <h3 className="text-lg font-semibold mb-4">{project.roadmap.team.title}</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {project.roadmap.team.members.map((member, index) => (
+                <div key={index} className="bg-background rounded-md p-3 text-center">
+                  {member}
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Monetization */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <DollarSign className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.monetization.title}</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Revenue Streams:</h3>
+              <ul className="space-y-3">
+                {project.monetization.streams.map((stream, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-primary font-medium">•</span>
+                    <span>{stream}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-muted p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">{project.monetization.funding.title}</h3>
+              <p className="mb-4">{project.monetization.funding.description}</p>
+              <ul className="space-y-2">
+                {project.monetization.funding.allocation.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Team */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <Users className="h-6 w-6 text-primary" />
+            <h2 className="text-2xl font-bold">{project.team.title}</h2>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">Co-Founders & Innovators:</h3>
+            <div className="bg-muted p-6 rounded-lg">
+              {project.team.founders.map((founder, index) => (
+                <div key={index} className="flex flex-col md:flex-row md:items-center md:justify-between">
+                  <div className="mb-4 md:mb-0">
+                    <h4 className="text-xl font-bold">{founder.name}</h4>
+                    <p className="text-muted-foreground">{founder.role}</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <a 
+                      href={founder.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 flex items-center gap-1"
+                    >
+                      LinkedIn <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a 
+                      href={founder.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 flex items-center gap-1"
+                    >
+                      Website <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Team Members:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {project.team.members.map((member, index) => (
+                <div key={index} className="bg-muted p-4 rounded-lg text-center">
+                  <p className="font-medium">{member}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-center py-12 px-6 bg-gradient-to-r from-primary/10 to-primary/20 rounded-xl"
+        >
+          <h2 className="text-2xl font-bold mb-2">{project.callToAction.title}</h2>
+          <p className="text-xl text-muted-foreground mb-6">{project.callToAction.message}</p>
+          <Button size="lg" className="group">
+            {project.callToAction.buttonText}
+            <ArrowLeft className="h-4 w-4 transform rotate-180 transition-transform group-hover:translate-x-1" />
+          </Button>
+        </motion.div>
+
+      </section>
+    );
+  }
+
+  // Regular project detail rendering for other projects
   return (
     <section className="section-container py-16">
       <motion.div
