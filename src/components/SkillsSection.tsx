@@ -8,15 +8,15 @@ const SkillsSection = () => {
       title: "Product Management",
       icon: Brain,
       skills: [
-        "Product Development",
+        "Strategy",
         "Roadmapping",
-        "Stakeholder Management",
-        "Business Model Innovation",
+        "User Research",
+        "PRD Writing",
+        "Prioritization",
+        "Stakeholders",
         "Wireframing",
         "Prototyping",
-        "Product Lifecycle Management",
-        "User Research & PRD Writing",
-        "Data-Driven Decision Making"
+        "PLG Focus"
       ]
     },
     {
