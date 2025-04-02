@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Code, Wrench, Layout, Layers } from 'lucide-react';
@@ -14,7 +13,10 @@ const SkillsSection = () => {
         "Stakeholder Management",
         "Business Model Innovation",
         "Wireframing",
-        "Prototyping"
+        "Prototyping",
+        "Product Lifecycle Management",
+        "User Research & PRD Writing",
+        "Data-Driven Decision Making"
       ]
     },
     {
@@ -26,7 +28,9 @@ const SkillsSection = () => {
         "React.js",
         "Angular",
         "GraphQL",
-        "Tailwind"
+        "Tailwind",
+        "SQL (basic)",
+        "HTML/CSS (basic)"
       ]
     },
     {
@@ -40,7 +44,12 @@ const SkillsSection = () => {
         "Figma",
         "Jira",
         "Mixpanel",
-        "Metabase"
+        "Metabase",
+        "Google Analytics",
+        "Notion",
+        "Confluence",
+        "Slack",
+        "Hotjar"
       ]
     }
   ];
