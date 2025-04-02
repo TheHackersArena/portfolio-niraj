@@ -111,7 +111,7 @@ const SkillsSection = () => {
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Layout className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold">UX/UI Design</h3>
+              <h3 className="text-lg font-semibold">User Experience</h3>
             </div>
             <div className="space-y-2">
               <div className="w-full bg-secondary rounded-full h-2.5">
@@ -120,7 +120,7 @@ const SkillsSection = () => {
               <div className="flex justify-between text-xs text-muted-foreground">
                 <span>UI/UX Research</span>
                 <span>User Testing</span>
-                <span>Design Systems</span>
+                <span>Wireframes</span>
               </div>
             </div>
           </div>
@@ -130,16 +130,16 @@ const SkillsSection = () => {
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Layers className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold">Business Strategy</h3>
+              <h3 className="text-lg font-semibold">Product Strategy</h3>
             </div>
             <div className="space-y-2">
               <div className="w-full bg-secondary rounded-full h-2.5">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: '85%' }}></div>
               </div>
               <div className="flex justify-between text-xs text-muted-foreground">
-                <span>Go-to-Market</span>
-                <span>Market Analysis</span>
-                <span>Growth Strategy</span>
+                <span>GGo-to-Market</span>
+                <span>Market Fit</span>
+                <span>Conversion & Retention</span>
               </div>
             </div>
           </div>
