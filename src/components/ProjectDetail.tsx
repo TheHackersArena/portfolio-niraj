@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -282,7 +281,7 @@ const ProjectDetail = () => {
           </Link>
         </div>
 
-        {/* Hero Section */}
+        {/* Hero Section - Removed the CTA button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -296,13 +295,9 @@ const ProjectDetail = () => {
             <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
               {project.heroTitle}
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mb-8">
+            <p className="text-xl text-muted-foreground max-w-3xl">
               {project.heroSubtitle}
             </p>
-            <Button size="lg" className="group">
-              {project.ctaText}
-              <ArrowLeft className="h-4 w-4 transform rotate-180 transition-transform group-hover:translate-x-1" />
-            </Button>
           </div>
         </motion.div>
 
@@ -558,21 +553,6 @@ const ProjectDetail = () => {
               ))}
             </div>
           </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="text-center py-12 px-6 bg-gradient-to-r from-primary/10 to-primary/20 rounded-xl"
-        >
-          <h2 className="text-2xl font-bold mb-2">{project.callToAction.title}</h2>
-          <p className="text-xl text-muted-foreground mb-6">{project.callToAction.message}</p>
-          <Button size="lg" className="group">
-            {project.callToAction.buttonText}
-            <ArrowLeft className="h-4 w-4 transform rotate-180 transition-transform group-hover:translate-x-1" />
-          </Button>
         </motion.div>
 
       </section>
