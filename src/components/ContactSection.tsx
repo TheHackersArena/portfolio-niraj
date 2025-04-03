@@ -103,8 +103,7 @@ const ContactSection = () => {
               name="contact" 
               method="POST" 
               data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
+              netlify>
               {/* Hidden input for Netlify form detection */}
               <input type="hidden" name="form-name" value="contact" />
               
