@@ -7,8 +7,12 @@ import { toast } from 'sonner';
 const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Netlify forms will handle the submission
+    // This is just for UI feedback
     toast.success("Message sent successfully!");
-    // Reset form fields here
+    
+    // Reset form fields
     const form = e.target as HTMLFormElement;
     form.reset();
   };
@@ -93,12 +97,28 @@ const ContactSection = () => {
             className="card h-full bg-card text-card-foreground"
           >
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-            <form className="space-y-4" onSubmit={handleSubmit} netlify>
+            <form 
+              className="space-y-4" 
+              onSubmit={handleSubmit}
+              name="contact" 
+              method="POST" 
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              {/* Hidden input for Netlify form detection */}
+              <input type="hidden" name="form-name" value="contact" />
+              
+              {/* Honeypot field to avoid spam */}
+              <div className="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </div>
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
                 <input 
                   type="text" 
-                  id="name" 
+                  id="name"
+                  name="name" 
                   className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder="Your name"
                   required
@@ -109,7 +129,8 @@ const ContactSection = () => {
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">Email</label>
                 <input 
                   type="email" 
-                  id="email" 
+                  id="email"
+                  name="email" 
                   className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder="your@email.com"
                   required
@@ -119,7 +140,8 @@ const ContactSection = () => {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">Message</label>
                 <textarea 
-                  id="message" 
+                  id="message"
+                  name="message" 
                   rows={4} 
                   className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                   placeholder="Your message..."
