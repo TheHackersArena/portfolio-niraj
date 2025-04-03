@@ -93,7 +93,7 @@ const ContactSection = () => {
             className="card h-full bg-card text-card-foreground"
           >
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form className="space-y-4" onSubmit={handleSubmit} netlify>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
                 <input 
