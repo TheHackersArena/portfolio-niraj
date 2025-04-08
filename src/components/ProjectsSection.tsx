@@ -29,7 +29,6 @@ const ProjectsSection = () => {
       description: "Revamped onboarding, claims, and fraud prevention journeys to simplify health insurance access for Indian consumers.",
       imageSrc: "/placeholder.svg",
       pdfSrc: "/ICICI_Lombard.pdf",
-      pdfLink: "/pdf/icici-lombard",
       icon: FileText
     },
     {
@@ -39,7 +38,6 @@ const ProjectsSection = () => {
       description: "Built an intelligent platform for nonfiction readers to discover books, share notes, and engage in thematic discussions.",
       imageSrc: "/placeholder.svg",
       pdfSrc: "/Inbooks.pdf",
-      pdfLink: "/pdf/inbooks",
       icon: FileText
     },
     {
@@ -49,7 +47,6 @@ const ProjectsSection = () => {
       description: "Designed a modern SaaS platform for managing payroll, reimbursements, and GST-ready ledgers—tailored for high-growth teams.",
       imageSrc: "/placeholder.svg",
       pdfSrc: "/Neo_Bank_Fibe.pdf",
-      pdfLink: "/pdf/neo-bank-fibe",
       icon: FileText
     },
     {
@@ -59,7 +56,6 @@ const ProjectsSection = () => {
       description: "Conducted user research and proposed improvements to content recommendations, skip intro UX, and community sharing features.",
       imageSrc: "/placeholder.svg",
       pdfSrc: "/NETFLIX.pdf",
-      pdfLink: "/pdf/netflix",
       icon: FileText
     },
     {
@@ -69,7 +65,6 @@ const ProjectsSection = () => {
       description: "Built a cloud-based backend for managing arcade centers: equipment, tickets, staff, inventory, and analytics.",
       imageSrc: "/placeholder.svg",
       pdfSrc: "/Pac-Man-Services.pdf",
-      pdfLink: "/pdf/pac-man-services",
       icon: FileText
     }
   ];
@@ -185,7 +180,7 @@ const ProjectsSection = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
                   className="card hover:border-primary/20 flex flex-col rounded-2xl bg-card text-card-foreground hover:shadow-lg transition-all hover:scale-[1.02]"
                 >
-                  <Link to={study.pdfLink} className="h-full">
+                  <div className="h-full flex flex-col">
                     <div className="h-40 w-full overflow-hidden rounded-t-xl mb-4">
                       <img 
                         src={study.imageSrc} 
@@ -201,16 +196,19 @@ const ProjectsSection = () => {
                       <p className="text-sm mt-3">{study.description}</p>
                       
                       <div className="flex justify-end mt-4">
-                        <span 
+                        <a 
+                          href={study.pdfSrc} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
                           className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                           aria-label={`View ${study.title} case study`}
                         >
                           <study.icon className="h-4 w-4" />
                           <span>View Case Study</span>
-                        </span>
+                        </a>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
