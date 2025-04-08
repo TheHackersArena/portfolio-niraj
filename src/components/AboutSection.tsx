@@ -9,7 +9,7 @@ const AboutSection = () => {
       institution: "Masters' Union School of Business",
       degree: "Program in Product Management",
       year: "2023",
-      details: "",
+      details: "94%",
     },
     {
       institution: "Delhi University",
