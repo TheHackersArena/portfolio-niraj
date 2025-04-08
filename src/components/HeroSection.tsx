@@ -7,12 +7,12 @@ import TypewriterText from './TypewriterText';
 
 const HeroSection = () => {
   const typewriterPhrases = [
-    'zero to one',
-    'jugaad to PMF',
-    'chaos to clarity',
-    'first draft to shipped',
-    'problem to product',
-    'whiteboard to wireframe'
+    'Zero to One',
+    'MVP to Scale',
+    'Jugaad to PMF',
+    'Chaos to Clarity',
+    'Problem to Product',
+    'Whiteboard to Wireframe'
   ];
 
   return (
