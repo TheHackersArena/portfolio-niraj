@@ -66,9 +66,12 @@ const TypewriterText: React.FC<TypewriterTextProps> = ({
 
   return (
     <div className={className}>
-      <span>{staticPrefix}</span>
-      <span> {displayedText}</span>
-      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+      <span className="font-bold">{staticPrefix}</span>
+      <span className="text-primary font-medium ml-2 relative">
+        {displayedText}
+        <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100 ml-0.5`}>|</span>
+        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary/30"></span>
+      </span>
     </div>
   );
 };

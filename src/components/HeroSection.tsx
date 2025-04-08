@@ -66,7 +66,7 @@ const HeroSection = () => {
                   className="text-foreground/80 text-sm font-medium"
                 >
                   <TypewriterText
-                    staticPrefix="From"
+                    staticPrefix="Building From"
                     phrases={typewriterPhrases}
                     className="inline-flex"
                   />
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 className="hidden md:block text-foreground/80 text-lg font-medium mt-2"
               >
                 <TypewriterText
-                  staticPrefix="From"
+                  staticPrefix="Building From"
                   phrases={typewriterPhrases}
                   className="inline-flex"
                 />
