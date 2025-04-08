@@ -3,8 +3,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import TypewriterText from './TypewriterText';
 
 const HeroSection = () => {
+  const typewriterPhrases = [
+    'zero to one',
+    'jugaad to PMF',
+    'chaos to clarity',
+    'first draft to shipped',
+    'problem to product',
+    'whiteboard to wireframe'
+  ];
+
   return (
     <section className="min-h-screen w-full flex items-center justify-center relative pt-16 overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -49,14 +59,18 @@ const HeroSection = () => {
                   Niraj Kumar
                 </motion.h1>
                 
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-foreground/80 text-sm font-medium"
                 >
-                  Building the Future of Digital Health
-                </motion.p>
+                  <TypewriterText
+                    staticPrefix="From"
+                    phrases={typewriterPhrases}
+                    className="inline-flex"
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
@@ -75,14 +89,18 @@ const HeroSection = () => {
               <h1 className="hidden md:block text-4xl sm:text-5xl md:text-6xl font-bold mt-4">
                 Niraj Kumar
               </h1>
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="hidden md:block text-foreground/80 text-lg font-medium mt-2"
               >
-                Building the Future of Digital Health
-              </motion.p>
+                <TypewriterText
+                  staticPrefix="From"
+                  phrases={typewriterPhrases}
+                  className="inline-flex"
+                />
+              </motion.div>
               <h2 className="text-xl md:text-2xl text-foreground/70 font-medium mt-6 md:mt-0">
                 Product Manager | Tech Entrepreneur | Startup Enthusiast
               </h2>
