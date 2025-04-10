@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FolderGit2, Award, Lightbulb, FileText } from 'lucide-react';
@@ -27,7 +28,7 @@ const ProjectsSection = () => {
       title: "ICICI Lombard",
       subtitle: "Health Insurance Digital Experience",
       description: "Revamped onboarding, claims, and fraud prevention journeys to simplify health insurance access for Indian consumers.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/2935e9fa-a3ec-4ed8-9c8d-e2db872ad391.png",
       pdfSrc: "/ICICI_Lombard.pdf",
       icon: FileText
     },
@@ -36,7 +37,7 @@ const ProjectsSection = () => {
       title: "Inbooks",
       subtitle: "AI-Powered Book Discovery Platform",
       description: "Built an intelligent platform for nonfiction readers to discover books, share notes, and engage in thematic discussions.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/f519760f-0a5d-4989-90b0-5a95bfbbbb67.png",
       pdfSrc: "/Inbooks.pdf",
       icon: FileText
     },
@@ -45,7 +46,7 @@ const ProjectsSection = () => {
       title: "Neo Bank – Fibe",
       subtitle: "Payroll & Expense Automation for Startups",
       description: "Designed a modern SaaS platform for managing payroll, reimbursements, and GST-ready ledgers—tailored for high-growth teams.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/37546362-371f-47a3-bc05-b4bc3a850839.png",
       pdfSrc: "/Neo_Bank_Fibe.pdf",
       icon: FileText
     },
@@ -54,7 +55,7 @@ const ProjectsSection = () => {
       title: "Netflix",
       subtitle: "Social Content Discovery & UX Research",
       description: "Conducted user research and proposed improvements to content recommendations, skip intro UX, and community sharing features.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/3b11daaa-f3bf-4f64-a5fb-a50d5e663dd8.png",
       pdfSrc: "/NETFLIX.pdf",
       icon: FileText
     },
@@ -63,7 +64,7 @@ const ProjectsSection = () => {
       title: "Pac-Man Services",
       subtitle: "Gamezone Ops Management SaaS",
       description: "Built a cloud-based backend for managing arcade centers: equipment, tickets, staff, inventory, and analytics.",
-      imageSrc: "/placeholder.svg",
+      imageSrc: "/lovable-uploads/e6d50d43-210d-46af-9173-e383c6f96974.png",
       pdfSrc: "/Pac-Man-Services.pdf",
       icon: FileText
     }
@@ -132,7 +133,59 @@ const ProjectsSection = () => {
         </div>
 
         <div className="space-y-16">
-          {/* Startup MVPs - First */}
+          {/* Case Studies - First (moved up) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <h3 className="sub-section-title mb-6">Case Studies</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {caseStudies.map((study, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                  className="card hover:border-primary/20 flex flex-col rounded-2xl bg-card text-card-foreground hover:shadow-lg transition-all hover:scale-[1.02]"
+                >
+                  <div className="h-full flex flex-col">
+                    <div className="h-48 w-full overflow-hidden rounded-t-xl mb-4 bg-white flex items-center justify-center p-4">
+                      <img 
+                        src={study.imageSrc} 
+                        alt={study.title} 
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="flex-1 p-4">
+                      <h4 className="text-lg font-bold">{study.title}</h4>
+                      <p className="text-sm text-muted-foreground mt-1">{study.subtitle}</p>
+                      <p className="text-sm mt-3">{study.description}</p>
+                      
+                      <div className="flex justify-end mt-4">
+                        <a 
+                          href={study.pdfSrc} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                          aria-label={`View ${study.title} case study`}
+                        >
+                          <study.icon className="h-4 w-4" />
+                          <span>View Case Study</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Startup MVPs - Second (moved down) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -158,58 +211,6 @@ const ProjectsSection = () => {
                     <p className="text-muted-foreground mt-2 flex-grow">{startup.description}</p>
                   </motion.div>
                 </Link>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Case Studies - New Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
-            <h3 className="sub-section-title mb-6">Case Studies</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {caseStudies.map((study, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                  className="card hover:border-primary/20 flex flex-col rounded-2xl bg-card text-card-foreground hover:shadow-lg transition-all hover:scale-[1.02]"
-                >
-                  <div className="h-full flex flex-col">
-                    <div className="h-40 w-full overflow-hidden rounded-t-xl mb-4">
-                      <img 
-                        src={study.imageSrc} 
-                        alt={study.title} 
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    <div className="flex-1 p-4">
-                      <h4 className="text-lg font-bold">{study.title}</h4>
-                      <p className="text-sm text-muted-foreground mt-1">{study.subtitle}</p>
-                      <p className="text-sm mt-3">{study.description}</p>
-                      
-                      <div className="flex justify-end mt-4">
-                        <a 
-                          href={study.pdfSrc} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                          aria-label={`View ${study.title} case study`}
-                        >
-                          <study.icon className="h-4 w-4" />
-                          <span>View Case Study</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
               ))}
             </div>
           </motion.div>
