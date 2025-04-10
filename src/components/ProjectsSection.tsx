@@ -30,7 +30,8 @@ const ProjectsSection = () => {
       description: "Revamped onboarding, claims, and fraud prevention journeys to simplify health insurance access for Indian consumers.",
       imageSrc: "/lovable-uploads/2935e9fa-a3ec-4ed8-9c8d-e2db872ad391.png",
       pdfSrc: "/ICICI_Lombard.pdf",
-      icon: FileText
+      icon: FileText,
+      date: "Feb 2023"
     },
     {
       id: "inbooks",
@@ -39,7 +40,8 @@ const ProjectsSection = () => {
       description: "Built an intelligent platform for nonfiction readers to discover books, share notes, and engage in thematic discussions.",
       imageSrc: "/lovable-uploads/f519760f-0a5d-4989-90b0-5a95bfbbbb67.png",
       pdfSrc: "/Inbooks.pdf",
-      icon: FileText
+      icon: FileText,
+      date: "March 2022"
     },
     {
       id: "neo-bank-fibe",
@@ -48,7 +50,8 @@ const ProjectsSection = () => {
       description: "Designed a modern SaaS platform for managing payroll, reimbursements, and GST-ready ledgers—tailored for high-growth teams.",
       imageSrc: "/lovable-uploads/37546362-371f-47a3-bc05-b4bc3a850839.png",
       pdfSrc: "/Neo_Bank_Fibe.pdf",
-      icon: FileText
+      icon: FileText,
+      date: "May 2022"
     },
     {
       id: "netflix",
@@ -57,7 +60,8 @@ const ProjectsSection = () => {
       description: "Conducted user research and proposed improvements to content recommendations, skip intro UX, and community sharing features.",
       imageSrc: "/lovable-uploads/3b11daaa-f3bf-4f64-a5fb-a50d5e663dd8.png",
       pdfSrc: "/NETFLIX.pdf",
-      icon: FileText
+      icon: FileText,
+      date: "Aug 2022"
     },
     {
       id: "pac-man-services",
@@ -66,7 +70,8 @@ const ProjectsSection = () => {
       description: "Built a cloud-based backend for managing arcade centers: equipment, tickets, staff, inventory, and analytics.",
       imageSrc: "/lovable-uploads/e6d50d43-210d-46af-9173-e383c6f96974.png",
       pdfSrc: "/Pac-Man-Services.pdf",
-      icon: FileText
+      icon: FileText,
+      date: "Nov 2022"
     }
   ];
 
@@ -162,7 +167,10 @@ const ProjectsSection = () => {
                     </div>
 
                     <div className="flex-1 p-4">
-                      <h4 className="text-lg font-bold">{study.title}</h4>
+                      <div className="flex justify-between items-start">
+                        <h4 className="text-lg font-bold">{study.title}</h4>
+                        <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">{study.date}</span>
+                      </div>
                       <p className="text-sm text-muted-foreground mt-1">{study.subtitle}</p>
                       <p className="text-sm mt-3">{study.description}</p>
                       

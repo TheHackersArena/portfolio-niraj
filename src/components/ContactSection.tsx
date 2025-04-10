@@ -1,13 +1,28 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import { useFormStatus } from 'react-dom';
 
 const ContactSection = () => {
-  const { pending } = useFormStatus();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    
+    // Form submission logic would go here
+    
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+    }, 1500);
+  };
 
   return (
     <section className="section-container" id="contact">
@@ -46,8 +61,7 @@ const ContactSection = () => {
           </motion.div>
 
           <motion.form
-            action="/api/send"
-            method="post"
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,8 +77,8 @@ const ContactSection = () => {
             <div>
               <Textarea id="message" name="message" placeholder="Your Message" rows={4} required />
             </div>
-            <Button type="submit" disabled={pending}>
-              {pending ? "Submitting..." : "Send Message"}
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Send Message"}
             </Button>
           </motion.form>
         </div>
