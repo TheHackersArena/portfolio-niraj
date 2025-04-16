@@ -123,9 +123,9 @@ const ProjectDetail = () => {
           }
         ],
         members: [
-          "Aniruddha Niraj",
-          "Pranav Preeti",
-          "Nagaraj",
+          "Aniruddha",
+          "Pranav",
+          "Preeti",
           "Naman"
         ]
       },
