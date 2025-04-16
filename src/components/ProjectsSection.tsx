@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FolderGit2, Award, Lightbulb, FileText, ExternalLink } from 'lucide-react';
@@ -16,8 +15,7 @@ const ProjectsSection = () => {
       icon: Lightbulb,
       imageSrc: "/lovable-uploads/84983947-3427-4034-a2a6-19543bc6fe52.png",
       award: "2nd Place",
-      date: "July 2023",
-      externalLink: "https://docs.google.com/presentation/d/1w8oKmnVHc33yIpefO_m7rk17oX2tNLO7y9st91GBi4c/edit?usp=sharing"
+      date: "July 2023"
     },
     {
       id: "sodashi",

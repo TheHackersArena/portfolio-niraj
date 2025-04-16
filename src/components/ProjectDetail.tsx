@@ -8,25 +8,18 @@ const ProjectDetail = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
   
-  // Combined project data
   const allProjects = [
-    // Startups
     {
       id: "trial-room",
       title: "Trial Room",
+      subtitle: "Metaverse Platform for Job Selection",
       description: "Metaverse platform for job selection.",
       category: "Startup MVP",
       icon: Lightbulb,
-      fullDescription: `Trial Room is an innovative metaverse platform designed to revolutionize the job selection process. 
-                        It creates virtual environments where candidates can experience realistic work scenarios before making 
-                        career decisions. Using VR/AR technology, Trial Room allows users to virtually "try on" different roles and 
-                        company cultures, helping both employers and job seekers find their perfect match.`,
-      challenges: [
-        "Creating immersive VR environments that accurately reflect real workplace scenarios",
-        "Developing algorithms to match user preferences with suitable job opportunities",
-        "Optimizing performance across various devices and connection speeds"
-      ],
-      technologies: ["WebXR", "React", "Node.js", "ThreeJS"]
+      imageSrc: "/lovable-uploads/84983947-3427-4034-a2a6-19543bc6fe52.png",
+      award: "2nd Place",
+      date: "July 2023",
+      projectLink: "https://docs.google.com/presentation/d/1w8oKmnVHc33yIpefO_m7rk17oX2tNLO7y9st91GBi4c/edit?usp=sharing"
     },
     {
       id: "sodashi",
