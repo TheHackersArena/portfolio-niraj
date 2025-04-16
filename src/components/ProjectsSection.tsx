@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FolderGit2, Award, Lightbulb, FileText } from 'lucide-react';
+import { FolderGit2, Award, Lightbulb, FileText, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const ProjectsSection = () => {
   const startups = [
@@ -13,9 +14,10 @@ const ProjectsSection = () => {
       description: "Metaverse platform for job selection.",
       category: "Startup MVP",
       icon: Lightbulb,
-      imageSrc: "/lovable-uploads/37546362-371f-47a3-bc05-b4bc3a850839.png",
+      imageSrc: "/lovable-uploads/84983947-3427-4034-a2a6-19543bc6fe52.png",
       award: "2nd Place",
-      date: "July 2023"
+      date: "July 2023",
+      externalLink: "https://docs.google.com/presentation/d/1w8oKmnVHc33yIpefO_m7rk17oX2tNLO7y9st91GBi4c/edit?usp=sharing"
     },
     {
       id: "sodashi",
@@ -24,7 +26,7 @@ const ProjectsSection = () => {
       description: "Decentralized data marketplace.",
       category: "Startup MVP",
       icon: Lightbulb,
-      imageSrc: "/lovable-uploads/f519760f-0a5d-4989-90b0-5a95bfbbbb67.png",
+      imageSrc: "/lovable-uploads/3a4e7e28-5f42-48f6-ab6e-c7adcd9a1a85.png",
       award: "1st Place",
       date: "Jan 2023"
     }
@@ -240,6 +242,20 @@ const ProjectsSection = () => {
                           <span className="text-sm font-medium text-amber-500">{startup.award}</span>
                         </div>
                         <p className="text-sm mt-3">{startup.description}</p>
+                        
+                        {startup.externalLink && (
+                          <div className="flex justify-end mt-4">
+                            <a 
+                              href={startup.externalLink} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              <span>View Presentation</span>
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </motion.div>
