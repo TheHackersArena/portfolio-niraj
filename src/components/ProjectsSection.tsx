@@ -9,16 +9,24 @@ const ProjectsSection = () => {
     {
       id: "trial-room",
       title: "Trial Room",
+      subtitle: "Metaverse Platform for Job Selection",
       description: "Metaverse platform for job selection.",
       category: "Startup MVP",
-      icon: Lightbulb
+      icon: Lightbulb,
+      imageSrc: "/lovable-uploads/37546362-371f-47a3-bc05-b4bc3a850839.png",
+      award: "2nd Place",
+      date: "July 2023"
     },
     {
       id: "sodashi",
       title: "SODASHI",
+      subtitle: "Decentralized Data Marketplace",
       description: "Decentralized data marketplace.",
       category: "Startup MVP",
-      icon: Lightbulb
+      icon: Lightbulb,
+      imageSrc: "/lovable-uploads/f519760f-0a5d-4989-90b0-5a95bfbbbb67.png",
+      award: "1st Place",
+      date: "Jan 2023"
     }
   ];
 
@@ -138,7 +146,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="space-y-16">
-          {/* Case Studies - First (moved up) */}
+          {/* Case Studies - First */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +201,7 @@ const ProjectsSection = () => {
             </div>
           </motion.div>
 
-          {/* Startup MVPs - Second (moved down) */}
+          {/* Startup MVPs - Second */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,14 +217,31 @@ const ProjectsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                    className="card hover:border-primary/20 flex flex-col h-full bg-card text-card-foreground hover:shadow-md transition-all"
+                    className="card hover:border-primary/20 flex flex-col rounded-2xl bg-card text-card-foreground hover:shadow-lg transition-all hover:scale-[1.02]"
                   >
-                    <div className="flex items-start justify-between mb-3">
-                      <span className="text-xs font-medium text-primary/80 px-2 py-1 bg-primary/5 rounded-full">{startup.category}</span>
-                      <startup.icon className="h-5 w-5 text-primary" />
+                    <div className="h-full flex flex-col">
+                      <div className="h-48 w-full overflow-hidden rounded-t-xl mb-4 bg-white flex items-center justify-center p-4">
+                        <img 
+                          src={startup.imageSrc} 
+                          alt={startup.title} 
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div className="flex-1 p-4">
+                        <div className="flex justify-between items-start">
+                          <h4 className="text-lg font-bold">{startup.title}</h4>
+                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">{startup.date}</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-1">{startup.subtitle}</p>
+                        <div className="flex items-center mt-2">
+                          <Award className="h-4 w-4 text-amber-500 mr-1" />
+                          <span className="text-sm font-medium text-amber-500">{startup.award}</span>
+                        </div>
+                        <p className="text-sm mt-3">{startup.description}</p>
+                      </div>
                     </div>
-                    <h4 className="text-lg font-semibold">{startup.title}</h4>
-                    <p className="text-muted-foreground mt-2 flex-grow">{startup.description}</p>
                   </motion.div>
                 </Link>
               ))}
