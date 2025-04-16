@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
+import { Linkedin, ExternalLink } from "lucide-react";
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -57,6 +58,17 @@ const ContactSection = () => {
               <p>
                 I'll get back to you as soon as possible.
               </p>
+              <div className="py-4">
+                <a 
+                  href="https://www.linkedin.com/in/niraj-kumar/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors group"
+                >
+                  <p className="font-medium mr-2">Quickest way to reach me is LinkedIn</p>
+                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </a>
+              </div>
             </div>
           </motion.div>
 

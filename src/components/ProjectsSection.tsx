@@ -174,15 +174,17 @@ const ProjectsSection = () => {
                       />
                     </div>
 
-                    <div className="flex-1 p-4">
-                      <div className="flex justify-between items-start">
-                        <h4 className="text-lg font-bold">{study.title}</h4>
-                        <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">{study.date}</span>
+                    <div className="flex-1 p-4 flex flex-col">
+                      <div>
+                        <div className="flex justify-between items-start">
+                          <h4 className="text-lg font-bold">{study.title}</h4>
+                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">{study.date}</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-1">{study.subtitle}</p>
+                        <p className="text-sm mt-3">{study.description}</p>
                       </div>
-                      <p className="text-sm text-muted-foreground mt-1">{study.subtitle}</p>
-                      <p className="text-sm mt-3">{study.description}</p>
                       
-                      <div className="flex justify-end mt-4">
+                      <div className="flex justify-end mt-auto pt-4">
                         <a 
                           href={study.pdfSrc} 
                           target="_blank" 
